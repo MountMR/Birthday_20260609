@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>亲爱的丁女士20岁生日快乐</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <audio id="birthdayMusic" loop preload="auto"></audio>
+
+  <main class="app" aria-live="polite">
+    <section id="lockScreen" class="lock-screen">
+      <div class="banana-sky" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <div class="gru lock-gru" aria-hidden="true"><i></i><em></em></div>
+      <div class="minion cute two-eyed lock-minion" aria-hidden="true">
+        <i class="hair"></i><i class="band"></i><i class="eye e1"></i><i class="eye e2"></i><i class="mouth"></i><i class="overall"></i><i class="arm a1"></i><i class="arm a2"></i>
+      </div>
+      <div class="lock-panel">
+        <p class="kicker">Birthday Mission</p>
+        <h1>输入暗号<br>开启惊喜</h1>
+        <p class="hint">从2006.6.9到今天一共过了多少天</p>
+        <form id="passwordForm" class="password-form">
+          <input id="passwordInput" inputmode="numeric" autocomplete="off" placeholder="输入天数">
+          <button type="submit">开启</button>
+        </form>
+        <p id="passwordError" class="error" role="status"></p>
+      </div>
+    </section>
+
+    <section id="book" class="book is-hidden" aria-label="生日祝福翻页网页">
+      <div class="confetti" aria-hidden="true"></div>
+
+      <article class="page active mission-page theme-yellow" data-transition="rise" data-page="0">
+        <div class="mission-visual stage-photo">
+          <img src="images/7.jpg" alt="生日任务照片">
+          <div class="gru mission-gru" aria-hidden="true"><i></i><em></em></div>
+          <div class="minion mini two-eyed m-a" aria-hidden="true"><i class="hair"></i><i class="band"></i><i class="eye e1"></i><i class="eye e2"></i><i class="mouth"></i><i class="overall"></i></div>
+          <div class="minion mini one-eyed m-b" aria-hidden="true"><i class="hair"></i><i class="band"></i><i class="eye e1"></i><i class="mouth"></i><i class="overall"></i></div>
+        </div>
+        <div class="page-copy stage-copy">
+          <p class="kicker">Mission Accepted</p>
+          <!-- 第1页文字：在这里修改 -->
+          <h2>格鲁发布了一个新的任务</h2>
+          <p>今天不偷月亮，也不追坏蛋 (●ˇ∀ˇ●)<br>下一个任务，是带领小黄人们准时集合<br>为我一个可爱的女孩，办一场只属于她的20岁生日庆祝！</p>
+        </div>
+      </article>
+
+      <article class="page cake-page theme-party" data-transition="zoom" data-page="1">
+        <div class="fireworks" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+        <div class="cake-copy stage-copy">
+          <p class="kicker">Birthday Party</p>
+          <!-- 第2页文字：在这里修改 -->
+          <h2>点亮20岁的第一束光</h2>
+          <p>点击香蕉，小黄人们就会冲向蛋糕，把祝福、欢呼和烟花一起送到你面前！</p>
+        </div>
+        <div class="cake-stage stage-photo">
+          <div class="real-cake" aria-hidden="true">
+            <span class="candle c2">2</span>
+            <span class="candle c0">0</span>
+            <span class="flame f2"></span>
+            <span class="flame f0"></span>
+            <span class="cream"></span>
+            <span class="fruit cherry1"></span>
+            <span class="fruit cherry2"></span>
+            <span class="fruit cherry3"></span>
+          </div>
+          <button id="partyBtn" class="banana-button" type="button" aria-label="点击香蕉点燃蜡烛">
+            <span></span><span></span><span></span>
+          </button>
+          <p class="cheer-text">Bello! 生日快乐！</p>
+          <div class="cake-minions" aria-hidden="true">
+            <div class="minion party one-eyed p1"><i class="hair"></i><i class="band"></i><i class="eye e1"></i><i class="mouth"></i><i class="overall"></i><i class="arm a1"></i><i class="arm a2"></i></div>
+            <div class="minion party two-eyed p2"><i class="hair"></i><i class="band"></i><i class="eye e1"></i><i class="eye e2"></i><i class="mouth"></i><i class="overall"></i><i class="arm a1"></i><i class="arm a2"></i></div>
+            <div class="minion party tall one-eyed p3"><i class="hair"></i><i class="band"></i><i class="eye e1"></i><i class="mouth"></i><i class="overall"></i><i class="arm a1"></i><i class="arm a2"></i></div>
+            <div class="minion party round two-eyed p4"><i class="hair"></i><i class="band"></i><i class="eye e1"></i><i class="eye e2"></i><i class="mouth"></i><i class="overall"></i><i class="arm a1"></i><i class="arm a2"></i></div>
+            <div class="minion party two-eyed p5"><i class="hair"></i><i class="band"></i><i class="eye e1"></i><i class="eye e2"></i><i class="mouth"></i><i class="overall"></i><i class="arm a1"></i><i class="arm a2"></i></div>
+            <div class="minion party one-eyed p6"><i class="hair"></i><i class="band"></i><i class="eye e1"></i><i class="mouth"></i><i class="overall"></i><i class="arm a1"></i><i class="arm a2"></i></div>
+            <div class="minion party small two-eyed p7"><i class="hair"></i><i class="band"></i><i class="eye e1"></i><i class="eye e2"></i><i class="mouth"></i><i class="overall"></i></div>
+            <div class="minion party small one-eyed p8"><i class="hair"></i><i class="band"></i><i class="eye e1"></i><i class="mouth"></i><i class="overall"></i></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="page trait-page theme-blue" data-transition="slide" data-page="2">
+        <div class="page-copy stage-copy">
+          <p class="kicker">Your Spark</p>
+          <!-- 第3页文字：在这里修改 -->
+          <h2>你认真发光的样子<br>最好看</h2>
+          <p class="line-copy"><span>你好学，所以总能把世界一点点看得更清楚</span><span>你机灵，像小黄人突然冒出的好点子，总能让日子变得鲜活</span><span>你聪慧，不张扬，却总在重要的时候让人觉得可靠又明亮</span></p>
+        </div>
+        <div class="trait-grid stage-photo">
+          <figure><img src="images/11.jpg" alt="好学"></figure>
+          <figure><img src="images/10.jpg" alt="机灵"></figure>
+          <figure><img src="images/8.jpg" alt="聪慧"></figure>
+        </div>
+        <div class="corner-cast" aria-hidden="true">
+          <div class="minion mini one-eyed"><i class="hair"></i><i class="band"></i><i class="eye e1"></i><i class="mouth"></i><i class="overall"></i></div>
+          <div class="banana-bunch"><span></span><span></span><span></span></div>
+        </div>
+      </article>
+
+      <article class="page trait-page theme-pink" data-transition="float" data-page="3">
+        <div class="page-copy stage-copy">
+          <p class="kicker">More Like Minions</p>
+          <!-- 第4页文字：在这里修改 -->
+          <h2>你还有更多<br>可爱的特质</h2>
+          <p>有时候活泼得像一场突然响起的音乐<br>有时候细腻得能猜到没有说出口的情绪<br>你会认真生活<br>也会把普通的瞬间变得有趣<br>这些小小的光，拼起来就是独一无二的你!</p>
+        </div>
+        <div class="photo-row stage-photo">
+          <figure><img src="images/9.jpg" alt="可爱瞬间1"></figure>
+          <figure><img src="images/12.jpg" alt="可爱瞬间2"></figure>
+          <figure><img src="images/13.jpg" alt="可爱瞬间3"></figure>
+        </div>
+        <div class="page-mascots" aria-hidden="true">
+          <div class="minion mini two-eyed"><i class="hair"></i><i class="band"></i><i class="eye e1"></i><i class="eye e2"></i><i class="mouth"></i><i class="overall"></i></div>
+          <div class="tim-bear"><i></i></div>
+        </div>
+      </article>
+
+      <article class="page growth-page theme-green" data-transition="soft-turn" data-page="4">
+        <div class="page-copy stage-copy">
+          <p class="kicker">Twenty</p>
+          <!-- 第5页文字：在这里修改 -->
+          <h2>20岁的你<br>闪闪发光</h2>
+          <p>愿这一岁的你，被温柔以待，被好运偏爱<br>愿你走向更大的世界时，心里仍有笃定，眼里仍有光<br>愿身边一直有人，能把你的快乐认真收藏</p>
+        </div>
+        <div class="film-strip stage-photo">
+          <img src="images/1.jpg" alt="成长照片1">
+          <img src="images/2.jpg" alt="成长照片2">
+          <img src="images/3.jpg" alt="成长照片3">
+        </div>
+        <div class="floating-icons" aria-hidden="true"><span></span><span></span><span></span></div>
+      </article>
+
+      <article class="page memory-page theme-ocean" data-transition="slide-up" data-page="5">
+        <div class="page-copy stage-copy">
+          <p class="kicker">Places We Went</p>
+          <!-- 第6页文字：在这里修改 -->
+          <h2>我们一起走过</h2>
+          <p>海洋馆的蓝色光影里<br>环球影城的热闹街道上<br>一次次并肩而行，让我发现<br>因为有你，每一次出发都变成了值得记住的风景</p>
+        </div>
+        <div class="postcard-grid stage-photo">
+          <figure><img src="images/4.jpg" alt="回忆地点1"></figure>
+          <figure><img src="images/5.jpg" alt="回忆地点2"></figure>
+          <figure><img src="images/6.jpg" alt="回忆地点3"></figure>
+        </div>
+        <div class="minion small one-eyed walkby" aria-hidden="true"><i class="hair"></i><i class="band"></i><i class="eye e1"></i><i class="mouth"></i><i class="overall"></i></div>
+      </article>
+
+      <article class="page memory-page theme-sunset" data-transition="zoom" data-page="6">
+        <div class="page-copy stage-copy">
+          <p class="kicker">Things We Did</p>
+          <!-- 第7页文字：在这里修改 -->
+          <h2>我们一起做过</h2>
+          <p>一起看电影<br>一起寻找好吃的店<br>一起等落日把天空慢慢染红......<br>那些看似普通的小事<br>成为彼此心中反复回放的片段</p>
+        </div>
+        <div class="photo-row stage-photo">
+          <figure><img src="images/14.jpg" alt="一起做过的事1"></figure>
+          <figure><img src="images/15.jpg" alt="一起做过的事2"></figure>
+          <figure><img src="images/16.jpg" alt="一起做过的事3"></figure>
+        </div>
+        <div class="banana-bunch memory-bananas" aria-hidden="true"><span></span><span></span><span></span></div>
+      </article>
+
+      <article class="page food-page theme-food" data-transition="rise" data-page="7">
+        <div class="page-copy stage-copy">
+          <p class="kicker">Food Memories</p>
+          <!-- 第8页文字：在这里修改 -->
+          <h2>把日子吃成回忆</h2>
+          <p>甜品、蛋糕、披萨、沙拉......<br>幸福有时候很具体<br>只要我们边吃边聊<br>就能把一天过得香喷喷、亮晶晶</p>
+        </div>
+        <div class="food-grid stage-photo">
+          <img src="images/17.jpg" alt="美食照片1">
+          <img src="images/18.jpg" alt="美食照片2">
+          <img src="images/19.jpg" alt="美食照片3">
+          <img src="images/20.jpg" alt="美食照片4">
+          <img src="images/21.jpg" alt="美食照片5">
+          <img src="images/22.jpg" alt="美食照片6">
+          <img src="images/23.jpg" alt="美食照片7">
+          <img src="images/24.jpg" alt="美食照片8">
+        </div>
+      </article>
+
+      <article class="page final-page theme-final" data-transition="soft-turn" data-page="8">
+        <div class="final-cast" aria-hidden="true">
+          <div class="minion mini two-eyed"><i class="hair"></i><i class="band"></i><i class="eye e1"></i><i class="eye e2"></i><i class="mouth"></i><i class="overall"></i></div>
+          <div class="minion mini one-eyed"><i class="hair"></i><i class="band"></i><i class="eye e1"></i><i class="mouth"></i><i class="overall"></i></div>
+          <div class="tim-bear"><i></i></div>
+          <div class="banana-bunch"><span></span><span></span><span></span></div>
+        </div>
+        <div class="page-copy final-copy stage-copy">
+          <p class="kicker">Happy Forever!</p>
+          <!-- 第9页文字：在这里修改 -->
+          <h2>祝你快乐不止生日</h2>
+          <p>愿你20岁快乐，往后的每一天也都快乐！<br>愿你被爱包围，被好运照亮<br>愿你想做的事都有回响，想去的远方都能抵达<br>生日只是今天的名字，而我希望你开心，是天天、年年、永远!</p>
+        </div>
+      </article>
+
+      <nav class="controls" aria-label="翻页控制">
+        <button id="prevBtn" type="button" aria-label="上一页">‹</button>
+        <div class="page-dots" id="pageDots"></div>
+        <button id="nextBtn" type="button" aria-label="下一页">›</button>
+      </nav>
+
+      <button id="musicBtn" class="music-btn" type="button">暂停音乐</button>
+      <button id="restartBtn" class="restart-btn" type="button">再看一遍</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
